@@ -24,6 +24,8 @@ and
 `   <easy-row ratio="2-3" base="32">`  
 in your html.
 
+#### All elements within the tag are subject to alignment by the browser, but you may want to use `class="easy-item"` on children elements.
+
 Or, with VueJS 2, something like
 `  <easy-row :ratio="ratioVue" :base="baseVue">`
 after declaring 
@@ -46,4 +48,14 @@ in script.
 1-5  
 5-1  
 ### So, there are max 6 columns, but you can nest easy-row to make lots of combinations.
+
+# Available Bases
+There is base 0, which doesn't guarantee any minimum widths.  
+There is base 16, for sections that should be about 16em wide.  The css provides some minimum widths.  
+There is base 32, for areas about 32em wide.  
+
+Just try it and see which one works for you.   Base 0 may be fine.  
+
+
+
 
