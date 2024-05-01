@@ -19,7 +19,9 @@ and
 and you are ready.
 
 You can now use
-`   <easy-row ratio="2-3" base="0">`
+`   <easy-row ratio="2-3" >` 
+and  
+`   <easy-row ratio="2-3" base="32">`  
 in your html.
 
 Or, with VueJS 2, something like
