@@ -29,19 +29,19 @@ after declaring
 in script.
 
 # Available Ratios
-1
-1-1
-1-1-1
-1-1-1-1
-1-2
-2-1
-1-3
-3-1
-2-3
-3-2
-1-4
-4-1
-1-5
-5-1
+1  
+1-1  
+1-1-1  
+1-1-1-1  
+1-2  
+2-1  
+1-3  
+3-1  
+2-3  
+3-2  
+1-4  
+4-1  
+1-5  
+5-1  
 ### So, there are max 6 columns, but you can nest easy-row to make lots of combinations.
 
