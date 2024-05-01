@@ -6,7 +6,7 @@
 
 use in HTML document as: <easy-row ratio="1-2" base="16">
  ratio =  1-1 or 1-2 or 2-1 or 1-3 or 1-1-1
- base =  0 or 2 or 16 or 32
+ base =  0 or 16 or 32
 
  simply include: 
  <script src="/js/easy_row.js" type="module"></script>
