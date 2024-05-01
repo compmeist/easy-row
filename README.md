@@ -13,17 +13,18 @@ I also wrote a simple Vue Component implementation.  This is not really needed, 
 
 # Usage
 Include 
-<link type="text/css" rel="stylesheet" href="/js/easy-row/easy_row.css" />
-<script src="/js/easy-row/easy_row.js" type="module" charset="utf-8"></script>
+`<link type="text/css" rel="stylesheet" href="/js/easy-row/easy_row.css" />`
+and
+`<script src="/js/easy-row/easy_row.js" type="module" charset="utf-8"></script>`
 and you are ready.
 
 You can now use
-   <easy-row ratio="2-3" base="0">
+`   <easy-row ratio="2-3" base="0">`
 in your html.
 
 Or, with VueJS 2, something like
-  <easy-row :ratio="ratioVue" :base="baseVue">
+`  <easy-row :ratio="ratioVue" :base="baseVue">`
 after declaring 
-  Vue.config.ignoredElements = ['easy-row'];
+`  Vue.config.ignoredElements = ['easy-row'];`
 in script.
 
