@@ -1,0 +1,362 @@
+
+/*  N.E. Frick, 2024.  
+   Uses css3 grid and fractional elements for layout */
+
+:root {
+    --easy_item_border_radius: 0.5em;
+    --easy_item_border_color: none;
+    --easy_item_border_style:none;
+    --easy_item_border_width:1px;
+    --easy_gap:0.7em;
+    --easy_gap_tiny:0.07em;
+
+    --1efr32_min:32em;
+    --1efr32_by2_min:16em;
+    --1efr32_by3_min:11em;
+    --2efr32_by3_min:21em;
+    --1efr32_by4_min:8em;
+    --3efr32_by4_min:24em;
+    --2efr32_by5_min:13em;
+    --3efr32_by5_min:19em;
+    --1efr32_by5_min:5em;
+    --4efr32_by5_min:27em;
+    --1efr32_by6_min:4em;
+    --5efr32_by6_min:28em;
+
+    --1efr16_min:16em;
+    --1efr16_by2_min:8em;
+    --1efr16_by3_min:6em;
+    --2efr16_by3_min:10em;
+    --1efr16_by4_min:4em;
+    --3efr16_by4_min:12em;
+    --2efr16_by5_min:7em;
+    --3efr16_by5_min:9em;
+    --1efr16_by5_min:3em;
+    --4efr16_by5_min:13em;
+    --1efr16_by6_min:2em;
+    --5efr16_by6_min:14em;
+};
+
+
+/* Style for grid items */
+.easy-item {
+  padding: var(--easy_gap);
+  text-align: center;
+  border-color:var(--easy_item_border_color);
+  border-style:var(--easy_item_border_style);
+  border-radius:var(--easy_item_border_radius);
+  border-width:var(--easy_item_border_width);
+}
+
+
+
+/* Set up the grid container */
+/* classes for nested or regular container, no minimum widths */
+ .easy0-row {
+  display: grid;
+  grid-template-columns:   1fr; 
+  grid-gap: var(--easy_gap);
+}
+ .easy0-row- {
+  display: grid;
+  grid-template-columns:   1fr; 
+  grid-gap: var(--easy_gap);
+}
+ .easy0-row-1 {
+  display: grid;
+  grid-template-columns:   1fr; 
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-1-1 {
+  display: grid;
+  grid-template-columns:   1fr  1fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-1-1-1 {
+  display: grid;
+  grid-template-columns:   1fr  1fr 1fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-1-1-1-1 {
+  display: grid;
+  grid-template-columns:   1fr  1fr 1fr 1fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-1-2 {
+  display: grid;
+  grid-template-columns:   1fr  2fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-2-1 {
+  display: grid;
+  grid-template-columns:    2fr  1fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-3-2 {
+  display: grid;
+  grid-template-columns:   3fr  2fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-2-3 {
+  display: grid;
+  grid-template-columns:    2fr  3fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-1-3 {
+  display: grid;
+  grid-template-columns:   1fr  3fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-3-1 {
+  display: grid;
+  grid-template-columns:    3fr  1fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-1-4 {
+  display: grid;
+  grid-template-columns:   1fr  4fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-4-1 {
+  display: grid;
+  grid-template-columns:    4fr  1fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-1-5 {
+  display: grid;
+  grid-template-columns:   1fr  5fr;
+  grid-gap: var(--easy_gap);
+}
+.easy0-row-5-1 {
+  display: grid;
+  grid-template-columns:    5fr  1fr;
+  grid-gap: var(--easy_gap);
+}
+
+
+
+
+
+
+
+/*  about 500 pix min width - 32 ems */
+
+/* Creates columns that are at least 1efr32_min wide and expand to fill the available space */
+.easy32-row {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy32-row- {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-1 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-1-1 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_by2_min), 1fr) minmax(var(--1efr32_by2_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-1-1-1 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_by3_min), 1fr) minmax(var(--1efr32_by3_min), 1fr) minmax(var(--1efr32_by3_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-1-1-1-1 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_by4_min), 1fr) minmax(var(--1efr32_by4_min), 1fr) minmax(var(--1efr32_by4_min), 1fr) minmax(var(--1efr32_by4_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-1-2 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_by3_min), 1fr) minmax(var(--2efr32_by3_min), 2fr);
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-2-1 {
+  display: grid;
+  grid-template-columns:   minmax(var(--2efr32_by3_min), 2fr) minmax(var(--1efr32_by3_min), 1fr);
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-3-2 {
+  display: grid;
+  grid-template-columns:  minmax(var(--3efr32_by5_min), 3fr) minmax(var(--2efr32_by5_min), 2fr);
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-2-3 {
+  display: grid;
+  grid-template-columns:   minmax(var(--2efr32_by5_min), 2fr) minmax(var(--3efr32_by5_min), 3fr);
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-1-3 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_by4_min), 1fr) minmax(var(--3efr32_by4_min), 3fr);
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-3-1 {
+  display: grid;
+  grid-template-columns:   minmax(var(--3efr32_by4_min), 3fr) minmax(var(--1efr32_by4_min), 1fr);
+  grid-gap: var(--easy_gap);
+}
+
+.easy32-row-1-4 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_by5_min), 1fr) minmax(var(--4efr32_by5_min), 4fr);
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-4-1 {
+  display: grid;
+  grid-template-columns:   minmax(var(--4efr32_by5_min), 4fr) minmax(var(--1efr32_by5_min), 1fr);
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-1-5 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr32_by6_min), 1fr) minmax(var(--5efr32_by6_min), 5fr);
+  grid-gap: var(--easy_gap);
+}
+.easy32-row-5-1 {
+  display: grid;
+  grid-template-columns:   minmax(var(--5efr32_by6_min), 5fr) minmax(var(--1efr32_by6_min), 1fr);
+  grid-gap: var(--easy_gap);
+}
+
+
+
+
+
+/*  16 ems - about 240 pix min width */
+
+.easy16-row {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy16-row- {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-1 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-1-1 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_by2_min), 1fr) minmax(var(--1efr16_by2_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-1-1-1 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_by3_min), 1fr) minmax(var(--1efr16_by3_min), 1fr) minmax(var(--1efr16_by3_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-1-1-1-1 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_by4_min), 1fr) minmax(var(--1efr16_by4_min), 1fr) minmax(var(--1efr16_by4_min), 1fr) minmax(var(--1efr16_by4_min), 1fr); 
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-1-2 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_by3_min), 1fr) minmax(var(--2efr16_by3_min), 2fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-2-1 {
+  display: grid;
+  grid-template-columns:   minmax(var(--2efr16_by3_min), 2fr) minmax(var(--1efr16_by3_min), 1fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-3-2 {
+  display: grid;
+  grid-template-columns:  minmax(var(--3efr16_by5_min), 3fr) minmax(var(--2efr16_by5_min), 2fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-2-3 {
+  display: grid;
+  grid-template-columns:   minmax(var(--2efr16_by5_min), 2fr) minmax(var(--3efr16_by5_min), 3fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-1-3 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_by4_min), 1fr) minmax(var(--3efr16_by4_min), 3fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-3-1 {
+  display: grid;
+  grid-template-columns:   minmax(var(--3efr16_by4_min), 3fr) minmax(var(--1efr16_by4_min), 1fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-1-4 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_by5_min), 1fr) minmax(var(--4efr16_by5_min), 4fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-4-1 {
+  display: grid;
+  grid-template-columns:   minmax(var(--4efr16_by5_min), 4fr) minmax(var(--1efr16_by5_min), 1fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-1-5 {
+  display: grid;
+  grid-template-columns:  minmax(var(--1efr16_by6_min), 1fr) minmax(var(--5efr16_by6_min), 5fr);
+  grid-gap: var(--easy_gap);
+}
+.easy16-row-5-1 {
+  display: grid;
+  grid-template-columns:   minmax(var(--5efr16_by6_min), 5fr) minmax(var(--1efr16_by6_min), 1fr);
+  grid-gap: var(--easy_gap);
+}
+
+
+
+
+/* example usage of css variables 
+
+  METHOD ONE
+  *****  modify styles
+  <section class="easy0-row-2-1" style="--easy_item_border_color:black;--easy_item_border_style:solid">
+  </section>
+
+  METHOD TWO
+ .customred {
+  --easy-gap: 0;
+  --easy_item_border_color: red;
+  --easy_item_border_radius: 1em;
+}
+
+<div class="easy0-row-1 customred">
+  <!-- grid items -->
+</div>
+
+  */
+
+
+
+
+
+/* Responsive layout adjustments [class*="g-row"] */
+ /* 
+ @media  (max-width: 768px) {
+  .[class*="g-row"] 
+    grid-template-columns:  minmax(var(--1efr32_by4_min), 1fr); 
+    grid-gap: var(--easy_gap_tiny); 
+  }
+} 
+
+*/
+
+
+/* Switch to single column layout for smaller screens */
+/*
+
+@media  (max-width: 480px) {
+  .[class*="g-row"]
+    grid-template-columns: 1fr; 
+  }
+}
+
+*/
