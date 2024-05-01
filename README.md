@@ -1,5 +1,5 @@
 # easy-row
-css3 grid page layout scheme that is easy to use and understand
+My css3 grid page layout scheme that is easy to use and understand.  No support for old browsers.
 
 ## CSS
 The css uses "fr" or fractional units to denote grid spacing.   There is also a base of code that provides for minimum width, so wrapping does not cause other items to overflow.
