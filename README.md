@@ -47,7 +47,7 @@ in script.
 4-1  
 1-5  
 5-1  
-### So, there are max 6 columns, but you can nest easy-row to make lots of combinations.
+### So, there are max 6 columns, but you can use nesting to make lots of combinations.
 
 # Available Bases
 There is base 0, which doesn't guarantee any minimum widths.  
