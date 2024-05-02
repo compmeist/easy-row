@@ -31,6 +31,7 @@ after declaring
 in script.
 
 # Available Ratios
+Sum the numbers in the ratio to get the total number of columns used in the ratio calculation.  For example, 2-1 has 3 columns, with the first group having a column span of 2 ( although this has nothing to do with `<table>` elements).  
 1  
 1-1  
 1-1-1  
