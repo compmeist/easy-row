@@ -18,11 +18,9 @@ and
 `<script src="/js/easy-row/easy_row.js" type="module" charset="utf-8"></script>`
 and you are ready.
 
-You can now use
-`   <easy-row ratio="2-3" >` 
-and  
-`   <easy-row ratio="2-3" base="32">`  
-in your html.
+You can now use `<easy-row ratio="2-3" >` and  `<easy-row ratio="2-3" base="32">` in your html.    
+
+A ratio of 2-3 is where there is a 5 column full width and 2 of the 5 are used by the first child `<div>` of `<easy-row>` and 3 of the 5 are used by the second child `<div>` (or `<span>`) of `<easy-row>`.
 
 #### All elements within the tag are subject to alignment by the browser, but you may want to use `class="easy-item"` on children elements.
 
