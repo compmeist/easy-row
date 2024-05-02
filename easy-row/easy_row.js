@@ -1,4 +1,5 @@
 
+
 /* 
 
 <easy-row> custom Web Component element, no shadow DOM,  
@@ -6,7 +7,7 @@
 
 use in HTML document as: <easy-row ratio="1-2" base="16">
  ratio =  1-1 or 1-2 or 2-1 or 1-3 or 1-1-1
- base =  0 or 16 or 32
+ base =  0 or 2 or 16 or 32
 
  simply include: 
  <script src="/js/easy_row.js" type="module"></script>
@@ -24,6 +25,23 @@ export class EasyRow extends HTMLElement {
         this.base0 = '0';
     }
 
+    replaceEasyClassName(newEasyClass) {
+      var easy_c_i_c = 0;
+      this.classList.forEach(className => {
+        if (className.startsWith('easy')) {
+          easy_c_i_c++;
+        }
+      });
+      if (easy_c_i_c == 0) 
+        this.classList.add(newEasyClass);
+      else 
+        this.classList.forEach(className => {
+          if (className.startsWith('easy')) {
+            this.classList.replace(className, newEasyClass);
+          }
+        });
+    }
+
     attributeChangedCallback(name, oldValue, newValue) {
       if (name === 'ratio') {
         var clsName = newValue.trim();
@@ -36,13 +54,13 @@ export class EasyRow extends HTMLElement {
         else
         { this.ratio0 = '1-1';
         }
-        this.className = `easy${this.base0}-row-${this.ratio0}`;
+        this.replaceEasyClassName(`easy${this.base0}-row-${this.ratio0}`);
       }
       else if (name === 'base') {
        // const clsName = this.getAttribute('base');
         const clsName = newValue;
         if (clsName) {
-          
+
           switch (`${clsName.trim()}`) {
             case '16':
             case '32':this.base0 = clsName; break;
@@ -52,7 +70,7 @@ export class EasyRow extends HTMLElement {
         else
         { this.base0 = '0';
         }
-        this.className = `easy${this.base0}-row-${this.ratio0}`;
+        this.replaceEasyClassName(`easy${this.base0}-row-${this.ratio0}`);
         
       }
     }
