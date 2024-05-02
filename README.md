@@ -16,7 +16,7 @@ Include
 `<link type="text/css" rel="stylesheet" href="/js/easy-row/easy_row.css" />`
 and
 `<script src="/js/easy-row/easy_row.js" type="module" charset="utf-8"></script>`
-and you are ready.
+(in your final HTML output) and you are ready.
 
 You can now use `<easy-row ratio="2-3" >` and  `<easy-row ratio="2-3" base="32">` tag in your html ( no Vue or React or Angular framework needed ).
 
