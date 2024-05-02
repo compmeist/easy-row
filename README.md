@@ -48,6 +48,7 @@ in script.
 ### So, there are max 6 columns, but you can use nesting to make lots of combinations.
 
 # Available Bases
+(Bases are the term I used for width guarantees).  
 There is base 0, which doesn't guarantee any minimum widths.  
 There is base 16, for sections that should be about 16em wide.  The css provides some minimum widths.  
 There is base 32, for areas about 32em wide.  
