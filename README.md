@@ -5,7 +5,7 @@ A css3 grid page layout utility that is easy to use and understand.  No support 
 The css uses "fr" or fractional units to denote grid spacing.   There is also a base of code that provides for minimum width, so wrapping does not cause other items to overflow.
 
 ## Native Web Component helper
-I wrote a basic Web Component (doesn't require any framework) to make it easy to use.
+I wrote a super basic Web Component (doesn't require any framework) to make it easy to use.
 
 ## Vue Component helper
 I also wrote a simple Vue Component implementation.  This is not really needed, but I made it available.
